@@ -278,7 +278,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🗺️ Roadmap
 
 - [x] Initial release on PyPI
-- [ ] Configuration file support (`.ai-commit.yml`)
+- [x] Configuration file support (`.ai-commit.yml`)
 - [ ] More commit message formats
 - [ ] Interactive model selection
 - [ ] Emoji support in commits 🎉
