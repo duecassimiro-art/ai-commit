@@ -7,7 +7,7 @@ with open(os.path.join(this_directory, "README.md"), encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
-    name="ai-commit-tool",
+    name="ollama-git-commit",
     version="0.1.0",
     author="Himanshu Kumar",
     author_email="himanshu231204@gmail.com",
