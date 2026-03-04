@@ -3,7 +3,7 @@ requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6.2"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "ai-commit-cli"
+name = "ai-commit-tool"
 version = "0.1.0"
 description = "Generate AI-powered git commit messages using local Ollama"
 readme = "README.md"
