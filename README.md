@@ -170,22 +170,91 @@ The tool supports three commit message styles:
 
 ---
 
-## 🎨 Supported Ollama Models
 
-Any Ollama model works, but these are recommended:
+## 🤖 Auto Model Selection
 
-- **llama2** - Best overall performance
-- **codellama** - Optimized for code
-- **mistral** - Fast and efficient
-- **phi** - Lightweight option
-- **llama3** - Latest and most powerful
+AI Commit automatically selects the best available model on your system, **prioritizing lighter and faster models** for optimal performance.
+
+### Priority Order (Fastest to Slowest):
+
+1. **phi** - Smallest, fastest (Recommended for quick commits)
+2. **mistral** - Great balance of speed and quality
+3. **qwen** - Fast alternative
+4. **gemma** - Google's lightweight model
+5. **codellama** - Optimized for code
+6. **llama2** - Reliable but slower
+7. **llama3** - Most powerful but slowest
+
+### How It Works:
+
+When you run `ai-commit`, the tool will:
+1. Check all installed Ollama models
+2. Automatically select the lightest/fastest available
+3. Display which model was chosen
+4. Generate your commit message
+
+### Example Output:
 
 ```bash
-# Pull and use different models
-ollama pull codellama
-ollama pull mistral
-ollama pull phi
+$ ai-commit
+
+╔═══════════════════════════════════════════╗
+║         🤖 AI Commit Message Tool         ║
+║      Powered by Local Ollama 🦙           ║
+╚═══════════════════════════════════════════╝
+
+🔍 Checking Ollama server...
+✓ Ollama server is running
+
+Available models (3):
+  • phi:latest
+  • mistral:latest
+  • llama2:latest
+
+✓ Auto-selected: phi:latest
+  (Prioritizing lighter/faster models)
+
+📊 Changes:
+  + 8 lines added
+  - 0 lines removed
+
+🤖 Generating commit message...
 ```
+
+### Recommended Setup:
+
+For best performance, install a lightweight model:
+
+```bash
+# Fastest (Recommended)
+ollama pull phi
+
+# Good balance
+ollama pull mistral
+
+# For code-heavy projects
+ollama pull codellama
+```
+
+### Manual Model Override:
+
+If you want to use a specific model, you can set an environment variable:
+
+**Windows:**
+```cmd
+set OLLAMA_MODEL=mistral
+ai-commit
+```
+
+**Linux/Mac:**
+```bash
+export OLLAMA_MODEL=mistral
+ai-commit
+```
+
+---
+
+
 
 ---
 
