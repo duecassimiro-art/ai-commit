@@ -32,12 +32,12 @@ read -p "Choice [1-2]: " choice
 if [ "$choice" == "1" ]; then
     echo "📤 Uploading to TestPyPI..."
     twine upload -r testpypi dist/*
-    echo "✅ Test with: pip install --index-url https://test.pypi.org/simple/ ai-commit-cli"
+    echo "✅ Test with: pip install --index-url https://test.pypi.org/simple/ ollama-git-commit"
 elif [ "$choice" == "2" ]; then
     echo "⚠️  Uploading to PRODUCTION PyPI!"
     read -p "Confirm (yes/no): " confirm
     if [ "$confirm" == "yes" ]; then
         twine upload dist/*
-        echo "✅ Done! Install with: pip install ai-commit-cli"
+        echo "✅ Done! Install with: pip install ollama-git-commit"
     fi
 fi
