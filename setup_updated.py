@@ -1,10 +1,13 @@
-from setuptools import setup, find_packages
+from setuptools import setup
+import os
 
-with open("README.md", "r", encoding="utf-8") as fh:
-    long_description = fh.read()
+# Read README
+this_directory = os.path.abspath(os.path.dirname(__file__))
+with open(os.path.join(this_directory, "README.md"), encoding="utf-8") as f:
+    long_description = f.read()
 
 setup(
-    name="ai-commit",
+    name="ai-commit-cli",
     version="0.1.0",
     author="Himanshu Kumar",
     author_email="himanshu231204@gmail.com",
@@ -12,7 +15,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/himanshu231204/ai-commit",
-    packages=find_packages(),
+    py_modules=["ai_commit"],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
@@ -24,6 +27,7 @@ setup(
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: 3.12",
+        "Operating System :: OS Independent",
     ],
     python_requires=">=3.8",
     install_requires=[
@@ -38,6 +42,6 @@ setup(
     project_urls={
         "Bug Reports": "https://github.com/himanshu231204/ai-commit/issues",
         "Source": "https://github.com/himanshu231204/ai-commit",
-        "Documentation": "https://github.com/himanshu231204/ai-commit#readme",
+        "Funding": "https://github.com/sponsors/himanshu231204",
     },
 )
